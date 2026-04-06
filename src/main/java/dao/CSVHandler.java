@@ -26,7 +26,6 @@ import model.Role;
 public class CSVHandler implements EmployeeDAO {
 
     public CSVHandler() {
-        // Database-only: No migration call here to prevent duplicate uploads
     }
 
     @Override 
@@ -64,7 +63,6 @@ public class CSVHandler implements EmployeeDAO {
     @Override 
 public List<Employee> findAll() { 
     List<Employee> employees = new ArrayList<>();
-    // Make sure your table name matches (public.employees)
     String sql = "SELECT * FROM public.employees ORDER BY employee_id ASC";
     
     try (Connection conn = DatabaseConnection.getConnection();
@@ -72,7 +70,6 @@ public List<Employee> findAll() {
          ResultSet rs = pstmt.executeQuery()) {
         
         while (rs.next()) {
-            // This uses your existing mapping logic to turn a row into an Employee object
             employees.add(mapResultSetToEmployee(rs));
         }
     } catch (SQLException e) { 
@@ -282,7 +279,6 @@ public List<Employee> findAll() {
 
 @Override
 public ImageIcon getEmployeePhoto(int id) {
-    // SQL to get the photo bytes we just uploaded
     String sql = "SELECT profile_picture FROM public.employees WHERE employee_id = ?";
     
     try (Connection conn = DatabaseConnection.getConnection();
@@ -293,7 +289,6 @@ public ImageIcon getEmployeePhoto(int id) {
             if (rs.next()) {
                 byte[] imgBytes = rs.getBytes("profile_picture");
                 
-                // If the DB has the photo, use it!
                 if (imgBytes != null && imgBytes.length > 0) {
                     return new ImageIcon(imgBytes);
                 }
@@ -303,7 +298,6 @@ public ImageIcon getEmployeePhoto(int id) {
         System.err.println("Database Error: " + e.getMessage());
     }
     
-    // FALLBACK: Only use a file if the Database is empty
     return new ImageIcon("/Users/abigail/MotorPhF/src/main/resources/profile_pics/default.png");
 }
 
@@ -327,11 +321,10 @@ public ImageIcon getDashboardIcon(String iconName) {
     } catch (Exception e) {
         System.err.println("Error loading icon '" + iconName + "': " + e.getMessage());
     }
-    return null; // Returns null if not found, allowing the UI to show the fallback text
+    return null; 
 }
     @Override 
     public void saveProfilePicture(int id, File selectedFile) throws IOException { 
-        // Read file into bytes and update Database directly
         byte[] imageBytes = Files.readAllBytes(selectedFile.toPath());
         String sql = "UPDATE public.employees SET profile_picture = ? WHERE employee_id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
