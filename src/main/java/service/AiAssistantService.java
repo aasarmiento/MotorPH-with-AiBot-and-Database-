@@ -14,8 +14,7 @@ public class AiAssistantService {
     private final AttendanceDAO attendanceDao;
     private final LeaveService leaveService;
 
-    // Groq API Client
-    private final AiClient aiClient = new AiClient("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");
+    private final AiClient aiClient = new AiClient("gsk_OcKtSbWms5tX88NWX054YyfnXfKul6BhQwTAH4YlHL8Je");
 
     public AiAssistantService(EmployeeDAO employeeDao, AttendanceDAO attendanceDao, LeaveService leaveService) {
         this.employeeDAO = employeeDao;
@@ -24,19 +23,16 @@ public class AiAssistantService {
     }
 
     public String askHrBot(int empId, String userQuestion) {
-        // 1. Fetch the user who is currently logged in (e.g., Manuel III)
         Employee currentUser = employeeDAO.findById(empId);
         if (currentUser == null) {
             return "Error: User session not found in database.";
         }
 
-        // 2. Fetch ALL Employees from PostgreSQL to build the "Brain" of the AI
-        // This is what allows the AI to know about Beatriz Santos even if she isn't logged in
+        
         List<Employee> allEmployees = employeeDAO.findAll(); 
         
         StringBuilder companyKnowledge = new StringBuilder();
         for (Employee e : allEmployees) {
-            // We use the exact methods from your Employee model: getFirstName, getLastName, getPosition, getSupervisor
             companyKnowledge.append(String.format(
                 "- Employee: %s %s | Position: %s | Supervisor: %s | Status: %s\n",
                 e.getFirstName(), 
@@ -47,7 +43,6 @@ public class AiAssistantService {
             ));
         }
 
-        // 3. Construct the Data-Rich Prompt
         String context = String.format(
             "### SYSTEM ROLE\n" +
             "You are the MotorPH Smart Assistant. You have full access to the company employee directory provided below.\n\n" +
@@ -73,7 +68,6 @@ public class AiAssistantService {
             userQuestion
         );
 
-        // 4. Generate the response using the full database context
         return aiClient.generate(context);
     }
 }
