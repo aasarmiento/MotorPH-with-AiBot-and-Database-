@@ -16,13 +16,11 @@ import model.Attendance;
 
 public class AttendanceCSVHandler implements AttendanceDAO {
     
-    // CSV FILE_PATH and Formatters deleted - no longer needed!
 
     @Override
     public List<Attendance> getAttendanceByEmployee(int empNo) {
         List<Attendance> list = new ArrayList<>();
 
-        // FIX: Changed "date" to "attendance_date" to match your DB column
         String sql = "SELECT attendance_date, time_in, time_out FROM public.attendance WHERE employee_id = ? ORDER BY attendance_date ASC";
         
         try (Connection conn = DatabaseConnection.getConnection();
@@ -31,13 +29,11 @@ public class AttendanceCSVHandler implements AttendanceDAO {
             pstmt.setInt(1, empNo);
             try (ResultSet rs = pstmt.executeQuery()) {
                 while (rs.next()) {
-                    // FIX: Must also use "attendance_date" here
                     java.sql.Date sqlDate = rs.getDate("attendance_date");
                     if (sqlDate == null) continue;
                     
                     LocalDate date = sqlDate.toLocalDate();
                     
-                    // These look fine as long as they are 'time_in' and 'time_out' in Postgres
                     LocalTime tIn = rs.getTime("time_in") != null ? rs.getTime("time_in").toLocalTime() : null;
                     LocalTime tOut = rs.getTime("time_out") != null ? rs.getTime("time_out").toLocalTime() : null;
                     
@@ -50,8 +46,6 @@ public class AttendanceCSVHandler implements AttendanceDAO {
         return list;
     }
 
-    // recordAttendance, getAttendanceByMonth, etc. stay exactly the same 
-    // because they were already using SQL!
     
     @Override
     public Object[][] getAttendanceByMonth(int empNo, String month, String year) {
@@ -166,7 +160,6 @@ public class AttendanceCSVHandler implements AttendanceDAO {
     @Override
     public List<model.LeaveRequest> findLeavesByEmployeeId(int empNo) {
         List<model.LeaveRequest> leaves = new ArrayList<>();
-        // Assuming your table is named 'leave_requests' - adjust if named differently
         String sql = "SELECT leave_type, start_date, end_date, status FROM public.leave_requests WHERE employee_id = ?";
         
         try (Connection conn = DatabaseConnection.getConnection();
@@ -175,7 +168,6 @@ public class AttendanceCSVHandler implements AttendanceDAO {
             pstmt.setInt(1, empNo);
             try (ResultSet rs = pstmt.executeQuery()) {
                 while (rs.next()) {
-                    // Create a simple LeaveRequest object to hold the data
                     model.LeaveRequest leave = new model.LeaveRequest();
                     leave.setLeaveType(rs.getString("leave_type"));
                     leave.setStartDate(rs.getDate("start_date").toLocalDate());
