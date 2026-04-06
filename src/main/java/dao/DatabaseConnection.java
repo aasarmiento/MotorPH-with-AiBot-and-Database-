@@ -6,14 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    // URL format: jdbc:postgresql://[host]:[port]/[database_name]
     private static final String URL = "jdbc:postgresql://localhost:5432/MotorPH_Payroll";
     private static final String USER = "postgres";
-    private static final String PASS = "nobbydobby8"; // <--- CHANGE THIS
+    private static final String PASS = "no8"; 
 
     public static Connection getConnection() throws SQLException {
         try {
-            // This loads the PostgreSQL driver you added to your pom.xml
             Class.forName("org.postgresql.Driver");
             return DriverManager.getConnection(URL, USER, PASS);
         } catch (ClassNotFoundException e) {
@@ -28,7 +26,7 @@ public class DatabaseConnection {
          PreparedStatement pstmt = conn.prepareStatement(sql)) {
         
         pstmt.setString(1, event);
-        pstmt.setInt(2, employeeId); // This sets the Foreign Key
+        pstmt.setInt(2, employeeId); 
         pstmt.executeUpdate();
         
     } catch (SQLException e) {
