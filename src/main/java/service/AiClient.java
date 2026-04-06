@@ -10,7 +10,6 @@ import org.json.JSONObject;
 
 public class AiClient {
     private final String apiKey;
-    // Updated to Groq API URL
     private final String apiUrl = "https://api.groq.com/openai/v1/chat/completions";
 
     public AiClient(String apiKey) {
@@ -19,10 +18,8 @@ public class AiClient {
 
     public String generate(String prompt) {
         try {
-            // 1. Create the JSON request body
             JSONObject body = new JSONObject();
             
-            // FIXED: Changed model to one supported by Groq
             body.put("model", "llama-3.3-70b-versatile"); 
             
             JSONArray messages = new JSONArray();
@@ -32,7 +29,6 @@ public class AiClient {
             messages.put(message);
             body.put("messages", messages);
 
-            // 2. Build the HTTP Request
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(apiUrl))
@@ -41,18 +37,15 @@ public class AiClient {
                 .POST(HttpRequest.BodyPublishers.ofString(body.toString()))
                 .build();
 
-            // 3. Send and Get Response
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
             String responseBody = response.body();
 
-            // --- DEBUGGING: Useful for monitoring the Groq response ---
             System.out.println("--- Groq Raw Response ---");
             System.out.println(responseBody);
             System.out.println("---------------------------");
 
             JSONObject jsonResponse = new JSONObject(responseBody);
 
-            // 4. Safety Check: Handle errors from Groq
             if (jsonResponse.has("error")) {
                 JSONObject errorObj = jsonResponse.getJSONObject("error");
                 return "AI Error: " + errorObj.getString("message");
