@@ -1,0 +1,89 @@
+Employee #,Username,First Name,Last Name,Password,Role,Account Status
+10001,MGarcia,Manuel III,Garcia,1234,ADMIN,ACTIVE
+10002,ALim,Antonio,Lim,1234,ADMIN,ACTIVE
+10003,BAquino,Bianca Sofia,Aquino,1234,ADMIN,ACTIVE
+10004,IReyes,Isabella,Reyes,1234,ADMIN,ACTIVE
+10005,EHernandez,Eduard,Hernandez,123456,IT_STAFF,ACTIVE
+10006,AVillanueva,Andrea Mae,Villanueva,1234,HR_STAFF,ACTIVE
+10007,BSanjose,Brad,San Jose,1234,HR_STAFF,ACTIVE
+10008,ARomualdez,Alice,Romualdez,1234,HR_STAFF,ACTIVE
+10009,RAtienza,Rosie,Atienza,1234,HR_STAFF,ACTIVE
+10010,RAlvaro,Roderick,Alvaro,1234,ACCOUNTING,ACTIVE
+10011,ASalcedo,Anthony,Salcedo,1234,ACCOUNTING,ACTIVE
+10012,JLopez,Josie,Lopez,1234,ACCOUNTING,ACTIVE
+10013,MFarala,Martha,Farala,1234,ACCOUNTING,ACTIVE
+10014,LMartinez,Leila,Martinez,1234,ACCOUNTING,ACTIVE
+10015,FRomualdez,Fredrick,Romualdez,1234,ACCOUNTING,ACTIVE
+10016,CMata,Christian,Mata,1234,REGULAR_STAFF,ACTIVE
+10017,SDeleon,Selena,De Leon,1234,REGULAR_STAFF,ACTIVE
+10018,ASanjose,Allison,San Jose,1234,REGULAR_STAFF,ACTIVE
+10019,CRosario,Cydney,Rosario,1234,REGULAR_STAFF,ACTIVE
+10020,MBautista,Mark,Bautista,1234,REGULAR_STAFF,ACTIVE
+10021,DLazaro,Darlene,Lazaro,1234,REGULAR_STAFF,ACTIVE
+10022,KDelossantos,Kolby,Delos Santos,1234,REGULAR_STAFF,ACTIVE
+10023,VSantos,Vella,Santos,1234,REGULAR_STAFF,ACTIVE
+10024,TDelrosario,Tomas,Del Rosario,1234,REGULAR_STAFF,ACTIVE
+10025,JTolentino,Jacklyn,Tolentino,1234,REGULAR_STAFF,ACTIVE
+10026,PGutierrez,Percival,Gutierrez,1234,REGULAR_STAFF,ACTIVE
+10027,GManalaysay,Garfield,Manalaysay,1234,REGULAR_STAFF,ACTIVE
+10028,LVillegas,Lizeth,Villegas,1234,REGULAR_STAFF,ACTIVE
+10029,CRamos,Carol,Ramos,1234,REGULAR_STAFF,ACTIVE
+10030,EMaceda,Emelia,Maceda,1234,REGULAR_STAFF,ACTIVE
+10031,DAguilar,Delia,Aguilar,1234,REGULAR_STAFF,ACTIVE
+10032,JCastro,John Rafael,Castro,1234,REGULAR_STAFF,ACTIVE
+10033,CMartinez,Carlos Ian,Martinez,1234,REGULAR_STAFF,ACTIVE
+10034,BSantos,Beatriz,Santos,123456,REGULAR_STAFF,ACTIVE
+10035,AAsdasdadsads,asdads,asdasdadsads,1234,REGULAR_STAFF,ACTIVE
+10036,AAsdasd,Abigai,asdasd,1234,REGULAR_STAFF,ACTIVE
+10037,ADelacruz,asdasd,Delacruz,1234,REGULAR_STAFF,ACTIVE
+10038,DAsdadsadsads,ddasddasd,asdadsadsads,1234,REGULAR_STAFF,ACTIVE
+10039,JDelacruz,Juan,Delacruz,1234,REGULAR_STAFF,ACTIVE
+10041,DDfssdfssdf,dsdfsdf,dfssdfssdf,1234,REGULAR_STAFF,ACTIVE
+10042,HSarmiento,Hazel,Sarmiento,1234,REGULAR_STAFF,ACTIVE
+10043,JVillaruz,Jamil,Villaruz,1234,REGULAR_STAFF,ACTIVE
+10044,JDeleon,jastin,deleon,1234,REGULAR_STAFF,ACTIVE
+10045,dasdasdasd,ddddd,asdasdasd,1234,REGULAR_STAFF,ACTIVE
+10046,FDela,fds,de la,1234,REGULAR_STAFF,ACTIVE
+10047,DWdaasdasdasd,dsdasdfsdsf,wdaasdasdasd,1234,REGULAR_STAFF,ACTIVE
+10048,JDelaalasdasdasd,juan,dela alasdasdasd,1234,REGULAR_STAFF,ACTIVE
+10049,APanganiban,angelica,panganiban,1234,REGULAR_STAFF,ACTIVE
+10050,BGates,Bill,Gates,1234,REGULAR_STAFF,ACTIVE
+10051,ASdaasdsdasadwdsa,adsdsdsa,sdaasdsdasadwdsa,1234,REGULAR_STAFF,ACTIVE
+10052,ASadasdasddassda,asdasddsa,sadasdasddassda,1234,REGULAR_STAFF,ACTIVE
+10053,FSdfsdfdsfsdf,fsdsdfdsf,sdfsdfdsfsdf,1234,REGULAR_STAFF,ACTIVE
+10054,ADfssddfs,asdasdasd,dfssddfs,1234,REGULAR_STAFF,ACTIVE
+10055,BAlonzo,Bea,Alonzo,1234,REGULAR_STAFF,ACTIVE
+10056,DGoliath,drake,goliath,1234,REGULAR_STAFF,ACTIVE
+10059,JIuhiuyyu,jnbjn,iuhiuyyu,1234,REGULAR_STAFF,ACTIVE
+10060,DFdgdfgfg,dfgdfgfdg,fdgdfgfg,1234,REGULAR_STAFF,ACTIVE
+10061,SSddsfsdf,sdfsdf,sddsfsdf,1234,REGULAR_STAFF,ACTIVE
+10062,ADsasdasdasdsdads,adsas,dsasdasdasdsdads,1234,REGULAR_STAFF,ACTIVE
+10065,DRsersdfdsfdsf,dfdssdf,rsersdfdsfdsf,1234,REGULAR_STAFF,ACTIVE
+10067,AAsdasassda,asdsadsda,asdasassda,1234,REGULAR_STAFF,ACTIVE
+10068,asarmiento,abi,sarmiento,1234,REGULAR_STAFF,ACTIVE
+10069,GGran,Graer,Gran,1234,REGULAR_STAFF,ACTIVE
+10070,GLdfsdfsfd,Gres,Ldfsdfsfd,1234,REGULAR_STAFF,ACTIVE
+10072,JVilla,Jerc,Villa,1234,HR_STAFF,ACTIVE
+10073,AAsdasdasd,asdasd,asdasdasd,1234,ADMIN,ACTIVE
+10074,SSdfsdfsdfsdf,sdfsdfsdf,sdfsdfsdfsdf,1234,ADMIN,ACTIVE
+10075,AAsdadsadsads,asdasdasd,asdadsadsads,1234,ADMIN,ACTIVE
+10076,ASarmiento,Abigail Ann,Sarmiento,1234,ACCOUNTING,ACTIVE
+10077,AFesdfsdf,asdds,fesdfsdf,1234,HR_STAFF,ACTIVE
+10078,JMananzala,John,Mananzala,null,HR_STAFF,ACTIVE
+10079,DQeqweqeqeq,dsadasd,qeqweqeqeq,1234,REGULAR_STAFF,ACTIVE
+10080,DAsdasdasd,dasdasda,asdasdasd,1234,REGULAR_STAFF,ACTIVE
+10081,lmessi,Leonel,Messi,1234,REGULAR_STAFF,ACTIVE
+10082,ADasdada,asdadada,dasdada,1234,REGULAR_STAFF,ACTIVE
+10083,FSdfsfsf,fsdsfsf,sdfsfsf,1234,REGULAR_STAFF,ACTIVE
+10084,LMessi,Leo,Messi,1234,REGULAR_STAFF,ACTIVE
+10085,DQdasdad,dadad,qdasdad,1234,REGULAR_STAFF,ACTIVE
+10087,NL,Nadine,L,1234,IT_STAFF,ACTIVE
+10088,TTester,Test,Tester,1234,REGULAR_STAFF,ACTIVE
+10089,TPerson,Test,Person,1234,REGULAR_STAFF,ACTIVE
+10090,JDcruz,J,DCruz,1234,IT_STAFF,ACTIVE
+10091,SBob,Sponge,Bob,1234,HR_STAFF,ACTIVE
+10092,JGrey,Jean,Grey,123456,ACCOUNTING,ACTIVE
+10093,WLogan,Wolvarine,Logan,123456,HR_STAFF,ACTIVE
+10094,MJordan,Michael,Jordan,098765,IT_STAFF,ACTIVE
+10095,LJames,Lebron,James,123456,IT_STAFF,ACTIVE
+10096,DDoraemon,Doraemon,Doraemon,111111,HR_STAFF,ACTIVE

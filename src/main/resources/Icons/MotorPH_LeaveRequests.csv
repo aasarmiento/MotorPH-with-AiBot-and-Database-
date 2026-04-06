@@ -1,0 +1,23 @@
+RequestID,EmployeeID,LastName,FirstName,Type,Start,End,Reason,Status
+LR-10001-01,10001,Garcia,Manuel III,Vacation Leave,03/01/2026,03/09/2026,No reason,Approved
+LR-10001-02,10001,Garcia,Manuel III,Sick Leave,03/23/2026,03/24/2026,No reason,Approved
+LR-10034-01,10034,Santos,Beatriz,Sick Leave,03/18/2026,03/19/2026,may sakit po,Approved
+LR-10034-02,10034,Santos,Beatriz,Emergency Leave,03/25/2026,03/27/2026,er po,Approved
+LR-10034-03,10034,Santos,Beatriz,Sick Leave,03/15/2026,03/16/2026,asdasd,Approved
+LR-10001-03,10001,Garcia,Manuel III,Sick Leave,03/02/2026,03/06/2026,awsda,Approved
+LR-10001-04,10001,Garcia,Manuel III,Emergency Leave,03/06/2013,03/07/2013,No reason,Approved
+LR-10005-01,10005,Hernandez,Eduard,Sick Leave,03/02/2026,03/05/2026,asdadsasdasd,Approved
+LR-10009-01,10009,Atienza,Rosie,Emergency Leave,03/13/2026,03/14/2026,asdasd,Approved
+LR-10034-04,10034,Santos,Beatriz,Emergency Leave,03/13/2026,03/14/2026,asdasdd,Approved
+LR-10005-02,10005,Hernandez,Eduard,Emergency Leave,03/14/2026,03/17/2026,No reason,Approved
+LR-10001-05,10001,Garcia,Manuel III,Vacation Leave,03/15/2026,03/17/2026,sdds,Approved
+LR-10001-06,10001,Garcia,Manuel III,Sick Leave,03/18/2026,03/19/2026,No reason,Approved
+LR-10001-07,10001,Garcia,Manuel III,Maternity Leave,03/16/2026,03/17/2026,sss,Approved
+LR-10001-08,10001,Garcia,Manuel III,Sick Leave,03/24/2026,03/25/2026,sdds,Approved
+LR-10001-09,10001,Garcia,Manuel III,Vacation Leave,03/30/2026,03/31/2026,jknkjhjo,Approved
+LR-10001-10,10001,Garcia,Manuel III,Sick Leave,03/25/2026,03/26/2026,No reason,Approved
+LR-10001-11,10001,Garcia,Manuel III,Sick Leave,03/15/2026,03/16/2026,fff,Approved
+LR-10034-05,10034,Santos,Beatriz,Vacation Leave,03/27/2026,03/27/2026,Leave leave leave leave,PENDING
+LR-10034-06,10034,Santos,Beatriz,Vacation Leave,03/27/2026,03/27/2026,Leave!!!,PENDING
+LR-10034-07,10034,Santos,Beatriz,Vacation Leave,07/07/2026,07/15/2026,"Plotting leave",PENDING
+LR-10034-08,10034,Santos,Beatriz,Paternity Leave,04/01/2026,04/01/2026,"Requesting leave",PENDING

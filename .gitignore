@@ -1,0 +1,11 @@
+# Ignore compiled classes and secrets
+target/
+*.class
+.env
+application.properties
+local_settings.properties
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.iml
