@@ -20,10 +20,8 @@ public class UserLibrary {
     }
 
 public boolean authenticate(String username, String password) {
-    // 1. Log the attempt to the console
     System.out.println("Attempting login for: [" + username + "]");
 
-    // SQL using TRIM for safety and ILIKE for case-insensitive usernames
     String sql = "SELECT * FROM public.login_credentials WHERE TRIM(username) ILIKE ? AND TRIM(password) = ?";
     
     try (Connection conn = DatabaseConnection.getConnection();
@@ -34,13 +32,11 @@ public boolean authenticate(String username, String password) {
         
         ResultSet rs = pstmt.executeQuery();
         
-        // 2. We only call rs.next() ONCE
         if (rs.next()) {
             System.out.println("User found in Database!");
             
             int empId = rs.getInt("employee_id");
             
-            // Fetch the full employee details from the employees table
             Employee emp = employeeDAO.findById(empId);
             
             if (emp != null) {
