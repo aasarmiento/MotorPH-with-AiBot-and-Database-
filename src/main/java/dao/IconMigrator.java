@@ -7,8 +7,6 @@ import java.sql.PreparedStatement;
 
 public class IconMigrator {
     public static void main(String[] args) {
-        // Double check this path in Finder! 
-        // If your icons are directly in resources, remove "Icons/"
         String folderPath = "/Users/abigail/MotorPhF/src/main/resources/Icons/";
         
         String sql = "INSERT INTO public.dashboard_assets (icon_name, icon_bytes, category) VALUES (?, ?, ?)";
@@ -23,7 +21,7 @@ public class IconMigrator {
             }
 
             for (File f : files) {
-                // This is the critical part: reading the actual data
+                
                 byte[] data = Files.readAllBytes(f.toPath());
                 
                 if (data.length > 0) {
