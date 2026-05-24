@@ -18,8 +18,8 @@ public class DatabaseMigrator {
             File[] listOfFiles = folder.listFiles();
 
             if (listOfFiles != null) {
-                for (File file : listOfFiles) {
-                    // This logic skips the .csv files in your folder and only takes images
+                for (File file: listOfFiles) {
+                    
                     if (file.isFile() && (file.getName().endsWith(".png") || file.getName().endsWith(".jpg"))) {
                         try {
                             String idStr = file.getName().split("\\.")[0];
